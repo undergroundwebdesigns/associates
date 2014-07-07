@@ -36,7 +36,7 @@ module Associates
 
     # @return [True, ActiveRecord::RecordInvalid]
     def save!
-      save || raise(ActiveRecord::RecordInvalid)
+      save || raise(ActiveRecord::RecordInvalid.new(self))
     end
   end
 end
